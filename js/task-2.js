@@ -16,7 +16,9 @@ class Storage {
             const indexToRemove = this.#items.indexOf(itemToRemove);
             this.#items.splice(indexToRemove, 1);
         }
-        else return `Item ${itemToRemove} doesn't exist`;
+        else {
+            return alert (`Item ${itemToRemove} doesn't exist`);
+        };
     }
 }
 
@@ -27,3 +29,4 @@ storage.addItem("Droid");
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 storage.removeItem("Prolonger");
 console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
